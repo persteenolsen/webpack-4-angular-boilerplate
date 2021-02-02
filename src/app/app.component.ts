@@ -11,21 +11,20 @@ declare const require: any;
 
 export class AppComponent {
 
-    name = 'Webpack 4 and Angular 7 !';
+    name = 'Webpack 4 with Angular 7';
 			
 	// Note: This does not work !!
-	//imageSrc = '../assets/images/logopersteenolsen.jpg'; 
+	//imageSrc = '../assets/images/angular.png'; 
 	
     // The following "tricks" is Webpack and not Angular cli !	
     // Note: Without using "esModule: false" in webpack.common.js an image [src] will need require + .default suffix to load !
 	// - esModule was introduced in file-loader 4.3 and from 5.0 set to true by default 
-	// imageSrc = require('../assets/images/logopersteenolsen.jpg').default;
+	// imageSrc = require('../assets/images/angular.png').default;
 		
 	// Note: Using "esModule: false" in webpack.common.js an image [src] will load just by require 
 	//(in the ts component) or without require ( component html-template) !
 	// - esModule was introduced in file-loader 4.3 and from 5.0 set to true by default 
-	imageSrc = require('../assets/images/logopersteenolsen.jpg');
-	
-	imageAlt = 'Per Steen Olsen';
+	imageSrc = require('../assets/images/angular.png');
+	imageAlt = 'Angular';
 	
 }

@@ -1,19 +1,25 @@
 
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 offset-sm-3">
 
+               <h1>{{name}}</h1>
+               <hr />
+               <a routerLink="/">Home</a> | <a routerLink="/menu">Menu</a>
+               <hr />
+			   
+			   <router-outlet></router-outlet>
 
-<h1>{{name}}</h1>
-<hr>
-<a routerLink="/">Home</a> | <a routerLink="/menu">Menu</a>
-<hr>
-
-Served from app.component.ts <br />
-<img [src]="imageSrc" [alt]="imageAlt" />
-
-<br />
-
-<router-outlet></router-outlet>
-
-Served from app.component.html <br />
-<img width="200px" src="../assets/images/favicon.png" alt="Webpack 4">
-
-
+               The Angular logo served from app.component.ts <br />
+               <img width="250px" [src]="imageSrc" [alt]="imageAlt" />
+               
+			   <br />
+              
+               The Webpack logo served from app.component.html <br />
+               <img width="250px" src="../assets/images/favicon.png" alt="Webpack 4">
+			   
+            </div>
+         </div>
+     </div>
+ </div>
