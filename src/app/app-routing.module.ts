@@ -13,7 +13,14 @@ const appRoutes: Routes = [
     { path: '', component: HomeComponent },
 	{ path: 'about', component: AboutComponent },
 	{ path: 'myinfo', component: MyInfoComponent },
-	{ path: 'menu', loadChildren: './modules/menu/menu.module#MenuModule' }
+	
+	{ path: 'menu', loadChildren: './modules/menu/menu.module#MenuModule' },
+	{ path: 'error', component: ErrorComponent },
+	
+	
+    // otherwise redirect to home
+    { path: '**', redirectTo: 'error' }
+	
 	
 	
 ];
