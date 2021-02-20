@@ -10,8 +10,9 @@ declare const require: any;
 })
 
 export class AppComponent {
-
-    name = 'Webpack 4 with Angular 7';
+    
+	// This message will be displayed on every pages at the bottom
+    message = 'A single page application made in Angular';
 			
 	// Note: This does not work !!
 	//imageSrc = '../assets/images/angular.png'; 
@@ -24,7 +25,7 @@ export class AppComponent {
 	// Note: Using "esModule: false" in webpack.common.js an image [src] will load just by require 
 	//(in the ts component) or without require ( component html-template) !
 	// - esModule was introduced in file-loader 4.3 and from 5.0 set to true by default 
-	imageSrc = require('../assets/images/angular.png');
-	imageAlt = 'Angular';
+	imageSrc = require('../assets/images/favicon.png');
+	imageAlt = 'Webpack';
 	
 }

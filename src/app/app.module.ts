@@ -6,12 +6,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './shared/components/home/home.component';
 
+import { AboutComponent } from './shared/components/about/about.component';
+
+import { MyInfoComponent } from './shared/components/myinfo/myinfo.component';
+
+
+import { ErrorComponent } from './shared/components/error/error.component';
+
+
 import '../assets/css/styles';
 
 @NgModule({
     declarations: [
         AppComponent,
-        HomeComponent
+        HomeComponent,
+		AboutComponent,
+		MyInfoComponent,
+        ErrorComponent		
+		
     ],
     imports: [
         BrowserModule,
