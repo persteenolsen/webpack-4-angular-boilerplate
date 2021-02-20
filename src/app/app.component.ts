@@ -15,12 +15,12 @@ export class AppComponent {
     message = 'A single page application made in Angular';
 			
 	// Note: This does not work !!
-	//imageSrc = '../assets/images/angular.png'; 
+	//imageSrc = '../assets/images/favicon.png'; 
 	
     // The following "tricks" is Webpack and not Angular cli !	
     // Note: Without using "esModule: false" in webpack.common.js an image [src] will need require + .default suffix to load !
 	// - esModule was introduced in file-loader 4.3 and from 5.0 set to true by default 
-	// imageSrc = require('../assets/images/angular.png').default;
+	// imageSrc = require('../assets/images/favicon.png').default;
 		
 	// Note: Using "esModule: false" in webpack.common.js an image [src] will load just by require 
 	//(in the ts component) or without require ( component html-template) !

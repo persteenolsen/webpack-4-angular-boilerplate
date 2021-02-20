@@ -4,25 +4,42 @@
         <div class="row">
             <div class="col-sm-6 offset-sm-3">
 
-               <hr />
+              <hr />
 			                   
-               <a routerLink="/">
-			      <img width="50px" [src]="imageSrc" [alt]="imageAlt" /> 
-			   </a> 
-			   <a routerLink="/">Home</a> | <a routerLink="/about">About</a> | <a routerLink="/myinfo">Per Steen Olsen</a> | <a routerLink="/404error">Secret</a>
-			   <!--| <a routerLink="/menu">Menu</a>--> 
-               
-			   <hr />
-			   		                 
+              			   
+              <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+                    <a routerLink="/">
+			            <img width="50px" [src]="imageSrc" [alt]="imageAlt" /> 
+			        </a> 
 			   
-			   <router-outlet></router-outlet>
+                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"         aria-expanded="false" aria-label="Toggle navigation">
+                     <span class="navbar-toggler-icon"></span>
+                 </button>
+           
+                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+                    <div class="navbar-nav">
+
+                       <a class="nav-item nav-link" routerLink="/">Home</a>
+                       <a class="nav-item nav-link" routerLink="/about">About</a>
+					   <a class="nav-item nav-link" routerLink="/myinfo">Per Steen Olsen</a>
+					   <a class="nav-item nav-link" routerLink="/404error">Secret</a>
+
+                    </div>
+				  
+                </div>
+   
+             </nav>
+
 			   
-			   <br />
+		    <router-outlet></router-outlet>
 			   
-			   <!--This will display a message from the component on all pages-->
-			   {{message}}
+			<br />
 			   
-			   <br />
+			 <!--This will display a message from the component on all pages-->
+			 {{message}}
+			   
+			 <br />
                             
 			  			   
             </div>
