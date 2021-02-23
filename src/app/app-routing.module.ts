@@ -7,21 +7,23 @@ import { AboutComponent } from './shared/components/about/about.component';
 
 import { MyInfoComponent } from './shared/components/myinfo/myinfo.component';
 
+
+import { ListpostsComponent } from './shared/components/listposts/listposts.component';
+
 import { ErrorComponent } from './shared/components/error/error.component';
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent },
 	{ path: 'about', component: AboutComponent },
 	{ path: 'myinfo', component: MyInfoComponent },
+	{ path: 'listposts', component: ListpostsComponent },
 	
 	{ path: 'menu', loadChildren: './modules/menu/menu.module#MenuModule' },
 	{ path: 'error', component: ErrorComponent },
-	
-	
+		
     // otherwise redirect to home
     { path: '**', redirectTo: 'error' }
-	
-	
+		
 	
 ];
 

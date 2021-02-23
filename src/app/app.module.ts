@@ -10,6 +10,7 @@ import { AboutComponent } from './shared/components/about/about.component';
 
 import { MyInfoComponent } from './shared/components/myinfo/myinfo.component';
 
+import { ListpostsComponent } from './shared/components/listposts/listposts.component';
 
 import { ErrorComponent } from './shared/components/error/error.component';
 
@@ -22,6 +23,7 @@ import '../assets/css/styles';
         HomeComponent,
 		AboutComponent,
 		MyInfoComponent,
+		ListpostsComponent,
         ErrorComponent		
 		
     ],
