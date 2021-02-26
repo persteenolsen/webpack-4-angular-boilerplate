@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+
+import { Component, OnInit } from "@angular/core";
+import { HttpClient } from '@angular/common/http';
 
 @Component({
     selector: 'listposts-page',
@@ -6,14 +8,31 @@ import { Component } from '@angular/core';
     styleUrls: ['./listposts.component.scss']
 })
 
+export class ListpostsComponent implements OnInit {
+    totalAngularPackages: any;
+	
+    constructor(private http: HttpClient) { }
 
-export class ListpostsComponent {
+    ngOnInit() {          
+        this.http.get<SearchResults>('https://api.npms.io/v2/search?q=scope:angular').subscribe(data => {
+            this.totalAngularPackages = data.total;
+        })
+	  
+	  // TEST !
+	  //  this.http.get<NewSearchResults>('https://jsonplaceholder.typicode.com/posts??_start=0&_limit=1').subscribe(data => {
+      //      this.totalAngularPackages = data.userId;
+      //  })
+    }
+}
 
-    users = [
-        { firstName: 'Per', lastName: 'Olsen', email: 'per.olsen@test.com', role: 'Admin' },
-        { firstName: 'Ole', lastName: 'Jensen', email: 'ole.jensen@test.com', role: 'User' },
-        { firstName: 'Peter', lastName: 'Hansen', email: 'peter.hansen@test.com', role: 'User' },
-        { firstName: 'Hans', lastName: 'Larsen', email: 'hans.larsen@test.com', role: 'User' },
-        { firstName: 'Ib', lastName: 'Ibsen', email: 'ib.ibsen@test.com', role: 'User' }
-    ];
+interface SearchResults {
+    total: number;
+    results: Array<object>;
+}
+
+ // TEST !
+interface NewSearchResults {
+    userId: Array<object>;
+   // title: string;
+    
 }
