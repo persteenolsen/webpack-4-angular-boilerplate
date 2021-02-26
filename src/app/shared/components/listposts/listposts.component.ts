@@ -17,12 +17,12 @@ export class ListpostsComponent implements OnInit {
 
     ngOnInit() {  
 	    
-		// Requesting a total number of Angular packages at api.nmps.io
+		// Get Request for the total number of Angular packages at api.nmps.io
         this.http.get<SearchResults>('https://api.npms.io/v2/search?q=scope:angular').subscribe(data => {
         this.totalAngularPackages = data.total;
         })
 	  
-	    // Requesting a list of posts at jsonplaceholder
+	    // Get Reques for a list of posts at jsonplaceholder
 	    this.http.get<NewSearchResults>('https://jsonplaceholder.typicode.com/posts??_start=0&_limit=10').subscribe(data => {
         this.listOfPosts = data;
        })
