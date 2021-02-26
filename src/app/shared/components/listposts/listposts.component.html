@@ -1,15 +1,33 @@
 
-<h3 class="p-3 text-center">GET Request to a Web API</h3>
+<h3 class="p-3 text-center">The results of Web API GET requests</h3>
 
 <br />
 
+Total @angular packages: <b>{{totalAngularPackages}}</b> at the "api.npms.io" Web API   
+    
+ <br /><br />
+
 
 <div class="table-responsive">
-   
-   
-     Total @angular packages: {{totalAngularPackages}} at api.npms.io
-    
 	
+	Receiving the first 10 posts from the "jsonplaceholder" Web API<br /><br />
+	 <table class="table table-striped">
+         <thead>
+            <tr>
+               <th style="width: '25%'">Id</th>
+			   <th style="width: '75%'">Title</th>
+           </tr>
+          </thead>
+         <tbody>
+		   
+		   <tr *ngFor="let post of listOfPosts">
+		       <td>{{post.id}}</td>
+			   <td>{{post.title}}</td>
+		   </tr>
+		 </tbody>
+		 
+	  </table>
+	  
     
 </div>
 
