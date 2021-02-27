@@ -12,6 +12,7 @@ export class ListpostsComponent implements OnInit {
 
     totalAngularPackages: any;
 	listOfPosts: any;
+	errorMessage: any;
 	
     constructor(private http: HttpClient) { }
 
@@ -22,10 +23,26 @@ export class ListpostsComponent implements OnInit {
         this.totalAngularPackages = data.total;
         })
 	  
-	    // Get Reques for a list of posts at jsonplaceholder
-	    this.http.get<NewSearchResults>('https://jsonplaceholder.typicode.com/posts??_start=0&_limit=10').subscribe(data => {
-        this.listOfPosts = data;
+	    
+		// Get Request for a list of posts at jsonplaceholder
+		// Note: Without Error handling !
+	    //this.http.get<NewSearchResults>('https://jsonplaceholder.typicode.com/posts?_start=0&_limit=10').subscribe(data => {
+        //this.listOfPosts = data;
+        //})
+	    
+		// Get Request for a list of posts at jsonplaceholder
+		// Note: With Error handling: If there is an error like wrong url - an error message will be displayed
+	    this.http.get<NewSearchResults>('https://jsonplaceholder.typicode.com/posts?_start=0&_limit=10').subscribe({
+		   
+		    next: data => {
+                this.listOfPosts = data;
+            },
+            error: error => {
+                this.errorMessage = error.message;
+                console.error('There was an error!', error);
+            }
        })
+	   
     }
 }
 

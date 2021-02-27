@@ -10,24 +10,30 @@ Total @angular packages: <b>{{totalAngularPackages}}</b> at the "api.npms.io" We
 
 <div class="table-responsive">
 	
-	Receiving the first 10 posts from the "jsonplaceholder" Web API<br /><br />
-	 <table class="table table-striped">
-         <thead>
-            <tr>
-               <th style="width: '20%'">Id</th>
-			   <th style="width: '80%'">Title</th>
-           </tr>
-          </thead>
-         <tbody>
+	Try to receive the first 10 posts from the "jsonplaceholder" Web API<br /><br />
+	
+	 <div *ngIf="errorMessage != null">
+	      <div style='color: red'>{{errorMessage}}</div>
+	 </div>
+	 <div *ngIf="errorMessage == null">
+	 
+	    <table class="table table-striped">
+             <thead>
+                <tr>
+                   <th style="width: '20%'">Id</th>
+		    	   <th style="width: '80%'">Title</th>
+                </tr>
+             </thead>
+             <tbody>
 		   
-		   <tr *ngFor="let post of listOfPosts">
-		       <td>{{post.id}}</td>
-			   <td>{{post.title}}</td>
-		   </tr>
-		 </tbody>
+		      <tr *ngFor="let post of listOfPosts">
+		          <td>{{post.id}}</td>
+			      <td>{{post.title}}</td>
+		       </tr>
+		    </tbody>
 		 
-	  </table>
-	  
+	     </table>
+	  </div>
     
 </div>
 
