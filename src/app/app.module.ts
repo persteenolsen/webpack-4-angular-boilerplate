@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
+
 import { HomeComponent } from './shared/components/home/home.component';
 
 import { AboutComponent } from './shared/components/about/about.component';
@@ -13,6 +14,8 @@ import { AboutComponent } from './shared/components/about/about.component';
 import { MyInfoComponent } from './shared/components/myinfo/myinfo.component';
 
 import { ListpostsComponent } from './shared/components/listposts/listposts.component';
+
+import { SelectedPostComponent } from './shared/components/selectedpost/selectedpost.component';
 
 import { ErrorComponent } from './shared/components/error/error.component';
 
@@ -26,6 +29,7 @@ import '../assets/css/styles';
 		AboutComponent,
 		MyInfoComponent,
 		ListpostsComponent,
+		SelectedPostComponent,
         ErrorComponent		
 		
     ],

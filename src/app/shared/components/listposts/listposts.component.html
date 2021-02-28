@@ -28,7 +28,7 @@ Total @angular packages: <b>{{totalAngularPackages}}</b> at the "api.npms.io" We
 		   
 		      <tr *ngFor="let post of listOfPosts">
 		          <td>{{post.id}}</td>
-			      <td>{{post.title}}</td>
+			      <td><a routerLink="/thepost/{{post.id}}">{{post.title}}</a></td>
 		       </tr>
 		    </tbody>
 		 
