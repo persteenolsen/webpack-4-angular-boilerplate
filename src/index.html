@@ -14,7 +14,11 @@
 </head>
 <body>
 
-    
+       
+     <noscript>
+      <strong>This Angular App do not work properly without JavaScript enabled. Please enable it to continue.</strong>
+     </noscript>
+	 
     <!-- Note: Ready for making a dropdown Bootstrap navigation menu - if wanted -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -39,9 +43,23 @@
  
       
     </script>
-   
-
+    
+	
+	<div id="nochrome"></div>
    
     <app-root></app-root>
+	
+	
+	<script type="application/javascript">
+      
+	  // Showing a message to the User if not using Google Chrome !
+	  if (  ! (/Chrome/.test(window.navigator.userAgent ))){ 
+	  
+	      //window.location.href = '/ie.html';
+	      // Setting the GUI with the value returned from the Web API
+	      document.getElementById("nochrome").innerHTML = "<br /><center><b>Please try the Google Chrome Browser when using this Angular App !</b></center>";
+	     }
+		 
+	</script>
 </body>
 </html>
