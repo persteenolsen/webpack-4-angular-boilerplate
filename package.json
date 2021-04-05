@@ -10,7 +10,7 @@
     "webpack-prod": "cross-env NODE_ENV=production webpack --mode production",
     "build:prod": "npm run build:clean && ngc && npm run webpack-prod && npm run build:clean",
     "build:clean": "rimraf src/**/*.js src/**/*.js.map src/**/*.ngsummary.json src/**/**/*.ngfactory.ts src/**/*.ngstyle.ts src/**/*.shim.ts",
-    "prod": "http-server ./dist -a localhost -p 8021 -o"
+    "prod": "http-server ./dist -a localhost -p 8022 -o"
   },
   "repository": {
     "type": "git",
@@ -29,8 +29,11 @@
     "@angular/platform-server": "~7.2",
     "@angular/router": "~7.2",
     "@angular/upgrade": "~7.2",
+    "classlist.js": "^1.1.20150312",
     "core-js": "~2.6",
     "rxjs": "~6.4",
+    "web-animations-js": "^2.3.2",
+    "whatwg-fetch": "^3.6.2",
     "zone.js": "~0.8"
   },
   "devDependencies": {

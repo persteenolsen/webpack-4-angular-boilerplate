@@ -26,10 +26,10 @@ module.exports = webpackMerge(commonConfig, {
         },
         runtimeChunk: 'single',
         minimizer: [
-            new UglifyJsPlugin({
+           new UglifyJsPlugin({
                 cache: true,
                 parallel: true
-            }),
+            }), 
 
             new OptimizeCSSAssetsPlugin({
                 cssProcessor: cssnano,
@@ -39,8 +39,8 @@ module.exports = webpackMerge(commonConfig, {
                     }
                 },
                 canPrint: false
-            })
-        ]
+            }) 
+        ] 
     },
 
     module: {
