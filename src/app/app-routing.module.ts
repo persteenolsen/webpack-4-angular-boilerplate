@@ -2,18 +2,17 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './shared/components/home/home.component';
-
 import { AboutComponent } from './shared/components/about/about.component';
-
 import { MyInfoComponent } from './shared/components/myinfo/myinfo.component';
-
 import { ListpostsComponent } from './shared/components/listposts/listposts.component';
-
 import { SelectedPostComponent } from './shared/components/selectedpost/selectedpost.component';
+import { EditPostComponent } from './shared/components/editpost/editpost.component';
+import { CreatePostComponent } from './shared/components/createpost/createpost.component';
 
 import { ErrorComponent } from './shared/components/error/error.component';
 
 const appRoutes: Routes = [
+
     { path: '', component: HomeComponent },
 	{ path: 'about', component: AboutComponent },
 	{ path: 'myinfo', component: MyInfoComponent },
@@ -22,6 +21,8 @@ const appRoutes: Routes = [
 	{ path: 'menu', loadChildren: './modules/menu/menu.module#MenuModule' },
 	
 	{ path: 'thepost/:id', component: SelectedPostComponent },
+	{ path: 'editpost/:id', component: EditPostComponent },
+	{ path: 'createpost', component: CreatePostComponent },
 	
 	{ path: 'error', component: ErrorComponent },
 		
